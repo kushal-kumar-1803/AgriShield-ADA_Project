@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AgriShield: Farmer’s Decision Support System</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>🌾 AgriShield</h1>
+    <p>Enter farm and financial details to get personalized recommendations.</p>
+
+    <form action="/predict" method="post">
+      <label>Average Rainfall (mm)</label>
+      <input type="number" name="rainfall" step="any" required>
+
+      <label>Average Temperature (°C)</label>
+      <input type="number" name="temperature" step="any" required>
+
+      <label>Soil pH</label>
+      <input type="number" name="soil_ph" step="any" required>
+
+      <label>Humidity (%)</label>
+      <input type="number" name="humidity" step="any" required>
+
+      <label>Financial Score (0-100)</label>
+      <input type="number" name="finance_score" step="any" required>
+
+      <button type="submit">Predict Action</button>
+    </form>
+  </div>
+</body>
+</html>
