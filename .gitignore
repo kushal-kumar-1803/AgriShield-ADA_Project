@@ -5,10 +5,6 @@ venv/
 __pycache__/
 *.pyc
 
-# Ignore dataset files
-*.xlsx
-*.csv
-
 # Ignore IDE/project files
 .vscode/
 .idea/

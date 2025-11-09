@@ -1,39 +1,63 @@
 from flask import Flask, render_template, request
-import pickle
 import pandas as pd
+import pickle
+import os
 
 app = Flask(__name__)
 
+# ------------------------------
 # Load model and encoder
-model = pickle.load(open('model/agrishield_model.pkl', 'rb'))
-le = pickle.load(open('model/label_encoder.pkl', 'rb'))
+# ------------------------------
+MODEL_PATH = os.path.join("model", "agrishield_model.pkl")
+ENCODER_PATH = os.path.join("model", "label_encoder.pkl")
 
-@app.route('/')
+model = pickle.load(open(MODEL_PATH, "rb"))
+label_encoder = pickle.load(open(ENCODER_PATH, "rb"))
+
+@app.route("/")
 def home():
-    return render_template('index.html')
+    return render_template("index.html")
 
-@app.route('/predict', methods=['POST'])
+@app.route("/predict", methods=["POST"])
 def predict():
     try:
-        # Get input values from form
-        rainfall = float(request.form['rainfall'])
-        temperature = float(request.form['temperature'])
-        soil_ph = float(request.form['soil_ph'])
-        humidity = float(request.form['humidity'])
-        finance_score = float(request.form['finance_score'])
+        # Get form data
+        rainfall = request.form.get("rainfall")
+        temperature = request.form.get("temperature")
+        soil_ph = request.form.get("soil_ph")
+        humidity = request.form.get("humidity")
+        financial_score = request.form.get("financial_score")
 
-        # Create dataframe
-        input_data = pd.DataFrame([[rainfall, temperature, soil_ph, humidity, finance_score]],
-                                  columns=['Rainfall', 'Temperature', 'Soil_pH', 'Humidity', 'Finance_Score'])
+        # Validate inputs
+        if not all([rainfall, temperature, soil_ph, humidity, financial_score]):
+            return render_template(
+                "result.html",
+                prediction_text="⚠️ Please fill in all fields before submitting."
+            )
 
-        # Predict
-        pred = model.predict(input_data)[0]
-        label = le.inverse_transform([pred])[0]
+        # Prepare input for model
+        data = pd.DataFrame([{
+            "Rainfall": float(rainfall),
+            "Temperature": float(temperature),
+            "Soil_pH": float(soil_ph),
+            "Humidity": float(humidity),
+            "Financial_Score": float(financial_score)
+        }])
 
-        return render_template('result.html', prediction_text=f"Recommended Action: {label}")
+        # Ensure correct feature order
+        data = data.reindex(columns=model.feature_names_in_, fill_value=0)
+
+        # Make prediction
+        pred = model.predict(data)[0]
+        result = label_encoder.inverse_transform([pred])[0]
+
+        return render_template(
+            "result.html",
+            prediction_text=f"🌾 Recommended Action: {result}"
+        )
 
     except Exception as e:
-        return render_template('result.html', prediction_text=f"Error: {e}")
+        return render_template("result.html", prediction_text=f"❌ Error: {str(e)}")
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(debug=True)

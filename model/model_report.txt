@@ -1,0 +1,156 @@
+============================================
+📅 Training run: 2025-11-09 12:34:19
+🎯 Accuracy: 79.00%
+📊 Classification Report:
+                          precision    recall  f1-score   support
+
+     Drainage Management       1.00      1.00      1.00        19
+          Farmer Support       0.00      0.00      0.00         2
+ Financial Stabilization       1.00      1.00      1.00        10
+  Heat Stress Protection       0.95      0.95      0.95        19
+      Improve Irrigation       1.00      0.50      0.67         8
+      Maintain Practices       0.33      0.08      0.13        12
+         Pest Management       0.67      1.00      0.80         6
+        Soil Enhancement       1.00      0.75      0.86         4
+Sustain Current Strategy       0.55      0.90      0.68        20
+
+                accuracy                           0.79       100
+               macro avg       0.72      0.69      0.68       100
+            weighted avg       0.78      0.79      0.76       100
+
+============================================
+
+============================================
+📅 Training run: 2025-11-09 12:35:49
+🎯 Accuracy: 98.54%
+📈 Cross-Validation: 97.48% ± 0.94%
+📊 Classification Report:
+                          precision    recall  f1-score   support
+
+     Drainage Management       1.00      0.95      0.97        20
+          Farmer Support       1.00      1.00      1.00        20
+ Financial Stabilization       1.00      1.00      1.00        21
+  Heat Stress Protection       0.95      1.00      0.98        21
+      Improve Irrigation       1.00      1.00      1.00        21
+      Maintain Practices       0.91      1.00      0.95        20
+         Pest Management       1.00      1.00      1.00        21
+         Risk Mitigation       1.00      1.00      1.00        21
+        Soil Enhancement       1.00      1.00      1.00        20
+Sustain Current Strategy       1.00      0.90      0.95        21
+
+                accuracy                           0.99       206
+               macro avg       0.99      0.99      0.99       206
+            weighted avg       0.99      0.99      0.99       206
+
+============================================
+
+============================================
+📅 Training run: 2025-11-09 12:40:26
+🎯 Accuracy: 98.54%
+📈 Cross-Validation: 97.48% ± 0.94%
+📊 Classification Report:
+                          precision    recall  f1-score   support
+
+     Drainage Management       1.00      0.95      0.97        20
+          Farmer Support       1.00      1.00      1.00        20
+ Financial Stabilization       1.00      1.00      1.00        21
+  Heat Stress Protection       0.95      1.00      0.98        21
+      Improve Irrigation       1.00      1.00      1.00        21
+      Maintain Practices       0.91      1.00      0.95        20
+         Pest Management       1.00      1.00      1.00        21
+         Risk Mitigation       1.00      1.00      1.00        21
+        Soil Enhancement       1.00      1.00      1.00        20
+Sustain Current Strategy       1.00      0.90      0.95        21
+
+                accuracy                           0.99       206
+               macro avg       0.99      0.99      0.99       206
+            weighted avg       0.99      0.99      0.99       206
+
+============================================
+
+============================================
+📅 Training run: 2025-11-09 12:56:34
+🎯 Accuracy: 97.09%
+📈 Cross-Validation: 97.77% ± 0.39%
+📊 Classification Report:
+                          precision    recall  f1-score   support
+
+     Drainage Management       1.00      1.00      1.00        20
+          Farmer Support       1.00      1.00      1.00        20
+ Financial Stabilization       0.84      1.00      0.91        21
+  Heat Stress Protection       1.00      1.00      1.00        21
+      Improve Irrigation       1.00      1.00      1.00        21
+      Maintain Practices       1.00      0.95      0.97        20
+         Pest Management       1.00      0.76      0.86        21
+         Risk Mitigation       1.00      1.00      1.00        21
+        Soil Enhancement       1.00      1.00      1.00        20
+Sustain Current Strategy       0.91      1.00      0.95        21
+
+                accuracy                           0.97       206
+               macro avg       0.98      0.97      0.97       206
+            weighted avg       0.97      0.97      0.97       206
+
+============================================
+
+============================================
+📅 Training run: 2025-11-09 12:59:00
+🎯 Accuracy: 97.09%
+📈 Cross-Validation: 97.77% ± 0.39%
+📊 Classification Report:
+                          precision    recall  f1-score   support
+
+     Drainage Management       1.00      1.00      1.00        20
+          Farmer Support       1.00      1.00      1.00        20
+ Financial Stabilization       0.84      1.00      0.91        21
+  Heat Stress Protection       1.00      1.00      1.00        21
+      Improve Irrigation       1.00      1.00      1.00        21
+      Maintain Practices       1.00      0.95      0.97        20
+         Pest Management       1.00      0.76      0.86        21
+         Risk Mitigation       1.00      1.00      1.00        21
+        Soil Enhancement       1.00      1.00      1.00        20
+Sustain Current Strategy       0.91      1.00      0.95        21
+
+                accuracy                           0.97       206
+               macro avg       0.98      0.97      0.97       206
+            weighted avg       0.97      0.97      0.97       206
+
+🌾 Feature Importance:
+        Feature  Importance
+       Rainfall       0.275
+    Temperature       0.213
+Financial_Score       0.183
+        Soil_pH       0.181
+       Humidity       0.148
+============================================
+
+============================================
+📅 Training run: 2025-11-09 13:08:22
+🎯 Accuracy: 97.09%
+📈 Cross-Validation: 97.77% ± 0.39%
+📊 Classification Report:
+                          precision    recall  f1-score   support
+
+     Drainage Management       1.00      1.00      1.00        20
+          Farmer Support       1.00      1.00      1.00        20
+ Financial Stabilization       0.84      1.00      0.91        21
+  Heat Stress Protection       1.00      1.00      1.00        21
+      Improve Irrigation       1.00      1.00      1.00        21
+      Maintain Practices       1.00      0.95      0.97        20
+         Pest Management       1.00      0.76      0.86        21
+         Risk Mitigation       1.00      1.00      1.00        21
+        Soil Enhancement       1.00      1.00      1.00        20
+Sustain Current Strategy       0.91      1.00      0.95        21
+
+                accuracy                           0.97       206
+               macro avg       0.98      0.97      0.97       206
+            weighted avg       0.97      0.97      0.97       206
+
+🌾 Feature Importance:
+        Feature  Importance
+       Rainfall       0.275
+    Temperature       0.213
+Financial_Score       0.183
+        Soil_pH       0.181
+       Humidity       0.148
+============================================
+
