@@ -1,3 +1,5 @@
+/* 🌾 AgriShield Styling (Laasya's Final Version) */
+
 body {
     background: linear-gradient(to right, #8cc63f, #5cb85c);
     font-family: 'Poppins', sans-serif;
@@ -9,6 +11,7 @@ body {
     color: #333;
 }
 
+/* Shared Container */
 .container {
     background-color: #fff;
     border-radius: 20px;
@@ -18,16 +21,27 @@ body {
     text-align: center;
 }
 
+/* Headings */
 h1 {
     color: #2d862d;
     margin-bottom: 10px;
+    font-size: 28px;
+    letter-spacing: 1px;
 }
 
+h2 {
+    color: #2d862d;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Paragraph Text */
 p {
     font-size: 14px;
     color: #555;
 }
 
+/* Input Form Layout */
 .form-box {
     display: flex;
     flex-direction: column;
@@ -35,18 +49,23 @@ p {
     margin-top: 15px;
 }
 
+/* Labels */
 label {
     font-weight: bold;
     color: #333;
     text-align: left;
+    font-size: 14px;
 }
 
+/* Inputs */
 input {
-    padding: 8px;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 8px;
+    font-size: 14px;
 }
 
+/* Button */
 button {
     background-color: #2d862d;
     color: white;
@@ -56,13 +75,15 @@ button {
     cursor: pointer;
     font-weight: bold;
     margin-top: 10px;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, transform 0.2s;
 }
 
 button:hover {
     background-color: #237323;
+    transform: scale(1.03);
 }
 
+/* Result Page Box */
 .result-box {
     width: 400px;
 }
@@ -70,10 +91,17 @@ button:hover {
 .result-box p {
     font-size: 16px;
     margin: 15px 0;
+    color: #333;
 }
 
+/* Back Link */
 a {
     text-decoration: none;
     color: #6a1b9a;
     font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #4a148c;
 }

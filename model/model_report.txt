@@ -154,3 +154,34 @@ Financial_Score       0.183
        Humidity       0.148
 ============================================
 
+============================================
+📅 Training run: 2025-11-11 11:38:22
+🎯 Accuracy: 97.09%
+📈 Cross-Validation: 97.77% ± 0.58%
+📊 Classification Report:
+                          precision    recall  f1-score   support
+
+     Drainage Management       1.00      1.00      1.00        20
+          Farmer Support       1.00      1.00      1.00        20
+ Financial Stabilization       0.84      1.00      0.91        21
+  Heat Stress Protection       1.00      1.00      1.00        21
+      Improve Irrigation       1.00      1.00      1.00        21
+      Maintain Practices       1.00      0.95      0.97        20
+         Pest Management       1.00      0.76      0.86        21
+         Risk Mitigation       1.00      1.00      1.00        21
+        Soil Enhancement       1.00      1.00      1.00        20
+Sustain Current Strategy       0.91      1.00      0.95        21
+
+                accuracy                           0.97       206
+               macro avg       0.98      0.97      0.97       206
+            weighted avg       0.97      0.97      0.97       206
+
+🌾 Feature Importance:
+        Feature  Importance
+       Rainfall       0.275
+    Temperature       0.212
+Financial_Score       0.183
+        Soil_pH       0.180
+       Humidity       0.149
+============================================
+
